@@ -13,50 +13,56 @@ struct ContentView: View {
     @Query private var items: [Item]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+            NavigationSplitView {
+                SidebarView()
+            }detail: {
+                DetailView()
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+        }
+
+}
+struct DetailView: View {
+    var item: String?
+
+    var body: some View {
+        if let item = item {
+            NavigationStack {
+                NavigationLink {
+                    Text("asd")
+                } label: {
+                    VStack {
+                        Text("Detail view for \(item)")
+                            .font(.largeTitle)
+                            .bold()
+                        Text("demo")
+                            .font(.title2)
                     }
+                    .background(in: RoundedRectangle(cornerRadius: 15))
                 }
             }
-        } detail: {
-            Text("Select an item")
+                .navigationTitle(item)
+        } else {
+            Text("No item selected")
+                .navigationTitle("Detail")
         }
     }
+}
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+struct SidebarView: View {
+    var body: some View {
+        List {
+            Section {
+                NavigationLink(destination: DetailView(item: "Item 1")) {
+                    Text("swift")
+                }
+                NavigationLink(destination: DetailView(item: "Item 2")) {
+                    Text("SwiftUI")
+                }
+            } header: {
+                Text("Programming")
             }
         }
+        .navigationTitle("Sidebar")
     }
 }
 

@@ -97,6 +97,9 @@
 		2770E8622C8350D400EE965D /* Zenith */ = {
 			isa = PBXGroup;
 			children = (
+				2770E8922C83533D00EE965D /* Support */,
+				2770E8912C83530700EE965D /* Views */,
+				2770E8902C8352FE00EE965D /* Models */,
 				2770E8632C8350D400EE965D /* ZenithApp.swift */,
 				2770E8652C8350D400EE965D /* ContentView.swift */,
 				2770E8672C8350D400EE965D /* Item.swift */,
@@ -130,6 +133,27 @@
 				2770E8832C8350D600EE965D /* ZenithUITestsLaunchTests.swift */,
 			);
 			path = ZenithUITests;
+			sourceTree = "<group>";
+		};
+		2770E8902C8352FE00EE965D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2770E8912C83530700EE965D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2770E8922C83533D00EE965D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +452,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -467,6 +492,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
