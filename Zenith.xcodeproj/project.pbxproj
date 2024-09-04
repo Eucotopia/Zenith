@@ -15,6 +15,8 @@
 		2770E8782C8350D600EE965D /* ZenithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770E8772C8350D600EE965D /* ZenithTests.swift */; };
 		2770E8822C8350D600EE965D /* ZenithUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770E8812C8350D600EE965D /* ZenithUITests.swift */; };
 		2770E8842C8350D600EE965D /* ZenithUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770E8832C8350D600EE965D /* ZenithUITestsLaunchTests.swift */; };
+		2770E8EF2C85DCBC00EE965D /* ProgramCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770E8EE2C85DCBC00EE965D /* ProgramCard.swift */; };
+		2770E8F22C85E23100EE965D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770E8F12C85E23100EE965D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2770E87D2C8350D600EE965D /* ZenithUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenithUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2770E8812C8350D600EE965D /* ZenithUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenithUITests.swift; sourceTree = "<group>"; };
 		2770E8832C8350D600EE965D /* ZenithUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenithUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2770E8EE2C85DCBC00EE965D /* ProgramCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCard.swift; sourceTree = "<group>"; };
+		2770E8F12C85E23100EE965D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		2770E8622C8350D400EE965D /* Zenith */ = {
 			isa = PBXGroup;
 			children = (
+				2770E8F02C85E22700EE965D /* Editor */,
+				2770E8EA2C84BC5E00EE965D /* Enums */,
 				2770E8922C83533D00EE965D /* Support */,
 				2770E8912C83530700EE965D /* Views */,
 				2770E8902C8352FE00EE965D /* Models */,
@@ -145,6 +151,7 @@
 		2770E8912C83530700EE965D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2770E8ED2C85DC9B00EE965D /* Program */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +161,29 @@
 			children = (
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		2770E8EA2C84BC5E00EE965D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2770E8ED2C85DC9B00EE965D /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				2770E8EE2C85DCBC00EE965D /* ProgramCard.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		2770E8F02C85E22700EE965D /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				2770E8F12C85E23100EE965D /* ViewController.swift */,
+			);
+			path = Editor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +318,8 @@
 			files = (
 				2770E8662C8350D400EE965D /* ContentView.swift in Sources */,
 				2770E8682C8350D400EE965D /* Item.swift in Sources */,
+				2770E8EF2C85DCBC00EE965D /* ProgramCard.swift in Sources */,
+				2770E8F22C85E23100EE965D /* ViewController.swift in Sources */,
 				2770E8642C8350D400EE965D /* ZenithApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
